@@ -1,0 +1,27 @@
+@(message: String)
+
+    @main("Welcome to JMaghreb") {
+
+        <div ng-controller="tweetWall" style="width: 60%; margin: auto">
+            <h1 style="margin: auto">JMaghreb tweet wall</h1>
+            <div class="ui feed segment">
+                <div class="event" ng-repeat="atweet in tweets">
+                    <div class="label">
+                        <img src="{{atweet.user.profile_image_url}}">
+                    </div>
+                    <div class="content">
+                        <div class="date">
+                            {{atweet.created_at}}
+                        </div>
+                        <div class="summary">
+                            <a>{{atweet.user.name}}</a> created a post
+                        </div>
+                        <div class="extra text">
+                            {{atweet.text}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    }
