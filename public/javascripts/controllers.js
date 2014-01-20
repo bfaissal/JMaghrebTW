@@ -15,8 +15,10 @@ angular.module('jmaghreb',[]).factory('WSocket', ['$rootScope','$location', func
 
 function tweetWall($scope,$rootScope,WSocket,$location){
     $rootScope.tweets = []
+    $scope.showTweets = false
     $rootScope.addTweet = function(data){
         $rootScope.tweets.unshift( data)
+        $scope.showTweets = true
         if($rootScope.tweets.length > 5 ){
             $rootScope.tweets.pop()
         }
