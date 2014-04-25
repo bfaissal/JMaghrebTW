@@ -31,7 +31,7 @@ object Application extends Controller {
       * enumerator : Enumerator = is a message producer
      */
   def wsTweet = WebSocket.using[String] { request =>
-    // do nothing when we got a websocket messae from one of the connected client
+    // do nothing when we got a websocket message from one of the connected client
     val in = Iteratee.foreach[String]( msg => { () })
     (in, enumerator)
   }
