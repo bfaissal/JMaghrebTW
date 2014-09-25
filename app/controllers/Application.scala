@@ -24,7 +24,7 @@ object Application extends Controller {
     .withRequestTimeout(-1)
     .sign(new OAuthCalculator(consumerKey, requestToken))
     // every time we get somthing from twitter we push it into our websocket channel
-    .get { headers => Iteratee.foreach[Array[Byte]]( bytes => channel.push(new String(bytes))) }.map(_.run)
+    .get { headers => Iteratee.foreach[Array[Byte]]( bytes => channel.push(new String(bytes))) }
   /* this is how websockets work inside play framework: http://www.playframework.com/documentation/2.2.x/ScalaWebSockets
       * TL;DR:
       * in: Itratee = is a consumer you can use it to handle mssage sent from you clients
