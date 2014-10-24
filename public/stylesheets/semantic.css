@@ -11268,7 +11268,7 @@ a.ui.teal.label:hover:before {
 
 .ui.segment {
   position: relative;
-  background-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.7);
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
   margin: 1em 0em;
@@ -16267,7 +16267,11 @@ body.pushed.scrolling.ui.dimmable {
 .ui.feed .event {
   width: 100%;
   display: table;
-  padding: 1em;
+  margin-bottom:10px;
+   background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+	
+	
 }
 
 .ui.feed .event:first-child {
@@ -16285,6 +16289,8 @@ body.pushed.scrolling.ui.dimmable {
   display: table-cell;
   vertical-align: top;
   text-align: left;
+  padding-left:1em;
+  
 }
 
 .ui.feed .label .icon {
@@ -16324,6 +16330,14 @@ body.pushed.scrolling.ui.dimmable {
 
 .ui.feed .content .summary {
   color: rgba(0, 0, 0, 0.75);
+  margin-top: -15px;
+  font-family:georgia, serif;
+}
+
+.ui.feed .content .summary a{
+  color: rgba(76,170,197, 0.8); 
+  margin-top: -15px;
+  font-weight: bold
 }
 
 .ui.feed .content .summary img {
@@ -16350,6 +16364,7 @@ body.pushed.scrolling.ui.dimmable {
 .ui.feed .content .extra.text {
   padding: 0.5em 1em;
   border-left: 0.2em solid rgba(0, 0, 0, 0.1);
+ 
 }
 
 /*******************************

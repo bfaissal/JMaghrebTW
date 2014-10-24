@@ -11,7 +11,14 @@ angular.module('jmaghreb',[]).factory('WSocket', ['$rootScope','$location', func
         })
     };
     return WSocket;
-}])
+}]);
+
+angular.module('jmaghreb').
+    filter('fromNow', function() {
+        return function(dateString) {
+            return moment(new Date(dateString)).fromNow()
+        };
+    });
 
 function tweetWall($scope,$rootScope,WSocket,$location){
     $rootScope.tweets = []
