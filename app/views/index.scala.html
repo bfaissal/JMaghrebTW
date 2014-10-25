@@ -18,7 +18,7 @@
                     </div>
 					
                     <div class="extra text">
-                        {{atweet.text }} <img class="media" src="{{atweet.entities.media[0].media_url  }}"/>
+                       {{atweet.text | parseUrlFilter | tweetLinky:'_blank'}}
                     </div>
                 </div>
             </div>
