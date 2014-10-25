@@ -3,7 +3,7 @@
 @main("Welcome to JMaghreb") {
 
     <div ng-controller="tweetWall" style="width: 60%; margin: auto">
-        <h1 style="margin: 10px"><img style="margin-bottom: -10px" src="@routes.Assets.at("images/logo.png")"> Tweet wall</h1>
+        <h1 style="margin: 10px">JMaghreb Tweet wall</h1>
         <div class="ui feed segment" ng-show="showTweets">
             <div class="event" ng-repeat="atweet in tweets">
                 <div class="label">
@@ -18,7 +18,7 @@
                     </div>
 					
                     <div class="extra text">
-                        {{atweet.text}}
+                        {{atweet.text }} <img class="media" src="{{atweet.entities.media[0].media_url  }}"/>
                     </div>
                 </div>
             </div>

@@ -19,6 +19,8 @@ angular.module('jmaghreb').
             return moment(new Date(dateString)).fromNow()
         };
     });
+	
+
 
 function tweetWall($scope,$rootScope,WSocket,$location){
     $rootScope.tweets = []
@@ -31,3 +33,4 @@ function tweetWall($scope,$rootScope,WSocket,$location){
         }
     }
 }
+
