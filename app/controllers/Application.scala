@@ -19,7 +19,7 @@ object Application extends Controller {
    val requestToken = RequestToken("335464378-8XSa8coEV2C1h9da233dy4KTHMncggSc0kgD5cx0","n5VoftuGLGAAdaT5gZ4Z6KsHQuHddxPd5CaPU8WQImuFg")
   val consumerKey = ConsumerKey("oe4ORcrk0KbtSoHGnzRcQ","0E1SkupW0GDOtNbruOkod0xbhckx8WHswAVwnomQI")
   // make a get request to twitter streaming API
-  WS.url("https://stream.twitter.com/1.1/statuses/filter.json?track=jmaghreb")
+  WS.url("https://stream.twitter.com/1.1/statuses/filter.json?track=picture")
     // no time out as it's an infinite stream ( we are talking big big data here ;) )
     .withRequestTimeout(-1)
     .sign(new OAuthCalculator(consumerKey, requestToken))
