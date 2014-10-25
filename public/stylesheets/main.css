@@ -4,3 +4,13 @@ body {
 	background-image: url(../images/bg.jpg);
 
 }
+
+.media{
+display: block;
+max-height: 320px;
+vertical-align: top;
+width: 100%;
+margin: 5px;
+max-width: 640px;
+border-radius: 10px 10px 10px 10px;
+}
